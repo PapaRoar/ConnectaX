@@ -16,6 +16,9 @@
             background: white;
             margin: 20px;
             line-height: 1.6;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
         }
         .banner {
             text-align: center;
@@ -26,6 +29,8 @@
             max-width: 600px;
             height: auto;
             border-radius: 10px;
+            pointer-events: none;
+            -webkit-user-drag: none;
         }
         .header {
             display: flex;
@@ -37,6 +42,8 @@
             height: 100px;
             border-radius: 50%;
             margin-right: 15px;
+            pointer-events: none;
+            -webkit-user-drag: none;
         }
         .header-text h1 {
             margin: 0;
@@ -89,6 +96,8 @@
             border-radius: 10px;
             transition: transform 0.3s ease;
             cursor: pointer;
+            pointer-events: none;
+            -webkit-user-drag: none;
         }
         .footer {
             text-align: center;
@@ -98,6 +107,17 @@
             color: gray;
         }
     </style>
+    <script>
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+
+    // Disable image dragging
+    document.addEventListener('dragstart', function(e) {
+      e.preventDefault();
+    });
+  </script>
 </head>
 <body>
     <!-- Banner Section -->
@@ -119,48 +139,48 @@
         <p>🌟 <b>Welcome to ConnectaX!</b> 🌟<br>
         Your ultimate all-in-one platform designed to unite people and create unforgettable digital experiences.</p>
 
-        <h2>Key Features:</h2>
+        <h2>Key Features -</h2>
         <ul>
-            <li>1️⃣ <b>Chat & Private Messaging –</b> Stay connected with friends or enjoy private conversations anytime. 💬</li>
-            <li>2️⃣ <b>Share Moments –</b> Instantly share photos and videos to capture and celebrate life’s highlights. 📸</li>
-            <li>3️⃣ <b>Video Calling –</b> Experience face-to-face connections, no matter the distance. ☎️</li>
-            <li>4️⃣ <b>Language Chats –</b> Join chats in English, Hindi, Russian, Portuguese, Chinese, Japanese, Korean & Arabic. 🌐</li>
-            <li>5️⃣ <b>Add Friends & Explore Profiles –</b> Build your network and discover like-minded individuals effortlessly. 🫂</li>
+            <li>1️⃣ <b>Chat & Private Messaging:</b> Stay connected with friends or enjoy private conversations anytime. 💬</li>
+            <li>2️⃣ <b>Share Moments:</b> Instantly share photos and videos to capture and celebrate life’s highlights. 📸</li>
+            <li>3️⃣ <b>Video Calling:</b> Experience face-to-face connections, no matter the distance. ☎️</li>
+            <li>4️⃣ <b>Language Chats:</b> Join chats in English, Hindi, Russian, Portuguese, Chinese, Japanese, Korean & Arabic. 🌐</li>
+            <li>5️⃣ <b>Add Friends & Explore Profiles:</b> Build your network and discover like-minded individuals effortlessly. 🫂</li>
         </ul>
 
-        <h2>🩷 Communities:</h2>
+        <h2>🩷 Communities -</h2>
         <ul>
-            <li>🌈 <b>Pride Central –</b> A safe and welcoming space for the LGBTQ+ community.</li>
-            <li>🧃 <b>Teens Cafe –</b> A safe space for teenagers to hang out.</li>
-            <li>🖤 <b>Goth Hub –</b> Connect with like-minded Goths.</li>
-            <li>✌️ <b>Hippies Club –</b> For the free-spirited and peace-loving!</li>
-            <li>👼🏻 <b>Cupid's Paradise –</b> A romantic haven for love, connection, and meaningful bonds!</li>
+            <li>🌈 <b>Pride Central:</b> A safe and welcoming space for the LGBTQ+ community.</li>
+            <li>🧃 <b>Teens Cafe:</b> A safe space for teenagers to hang out.</li>
+            <li>🖤 <b>Goth Hub:</b> Connect with like-minded Goths.</li>
+            <li>✌️ <b>Hippies Club:</b> For the free-spirited and peace-loving!</li>
+            <li>👼🏻 <b>Cupid's Paradise:</b> A romantic haven for love, connection, and meaningful bonds!</li>
         </ul>
 
-        <h2>Other Features:</h2>
+        <h2>Other Features -</h2>
         <ul>
-            <li>📹 <b>Reels –</b> Create reels, explore trends, and showcase your creativity effortlessly!</li>
-            <li>🎮 <b>Arcade –</b> Play 200+ exciting games and climb the leaderboard!</li>
-            <li>🧚🏻 <b>Meta Chat –</b> Explore, battle & chat with friends in a 2D RPG world.</li>
-            <li>🍿 <b>Entertainment –</b> Stream your favorite movies, tv shows, asian dramas, anime and read manga.</li>
-            <li>🎶 <b>Music –</b> Groove to diverse genres & tune in to live radio stations.</li>
-            <li>🎉 <b>Watch Party –</b> Join admin-hosted watch parties and chat with others in real time.</li>
-            <li>💬 <b>Threads –</b> Dive into discussions on 100+ topics and share your voice.</li>
-            <li>🌍 <b>Chats Finder –</b> Connect and chat with users from different apps.</li>
-            <li>🚀 <b>In-Built Browser –</b> Surf the web with speed and security, all within the app.</li>
-            <li>🛠️ <b>Customer Support –</b> Get quick, reliable assistance whenever needed.</li>
+            <li>🎬 <b>Reels:</b> Create reels, explore trends, and showcase your creativity effortlessly!</li>
+            <li>🎮 <b>Arcade:</b> Play 200+ exciting games and climb the leaderboard!</li>
+            <li>🧚🏻 <b>Meta Chat:</b> Explore, battle & chat with friends in a 2D RPG world.</li>
+            <li>🍿 <b>Entertainment:</b> Stream your favorite movies, tv shows, asian dramas, anime and read manga.</li>
+            <li>🎶 <b>Music:</b> Groove to diverse genres & tune in to live radio stations.</li>
+            <li>🎉 <b>Watch Party:</b> Join admin-hosted watch parties and chat with others in real time.</li>
+            <li>💬 <b>Threads:</b> Dive into discussions on 100+ topics and share your voice.</li>
+            <li>🌍 <b>Chats Finder:</b> Connect and chat with users from different apps.</li>
+            <li>🚀 <b>In-Built Browser:</b> Surf the web with speed and security, all within the app.</li>
+            <li>🛠️ <b>Customer Support:</b> Get quick, reliable assistance whenever needed.</li>
         </ul>
 
-        <h2>💎 Premium Features:</h2>
+        <h2>💎 Premium Features -</h2>
         <ul>
-            <li>🚫📢 <b>Ad-Free Experience –</b> Enjoy uninterrupted browsing and content.</li>
+            <li>📢 <b>Ad-Free Experience:</b> Enjoy uninterrupted browsing and content.</li>
         </ul>
 
-        <h2>🔒 Security First:</h2>
+        <h2>🔒 Security First -</h2>
         <ul>
-            <li>📵 <b>No Screenshots Allowed –</b> Safeguard your privacy.</li>
-            <li>🚫 <b>IP Ban –</b> Keep the community safe by blocking troublemakers.</li>
-            <li>🙅‍♀️ <b>Disable Private Chats –</b> Have full control over your interactions.</li>
+            <li>📵 <b>No Screenshots Allowed:</b> Safeguard your privacy.</li>
+            <li>🚫 <b>IP Ban:</b> Keep the community safe by blocking troublemakers.</li>
+            <li>🙅‍♀️ <b>Disable Private Chats:</b> Have full control over your interactions.</li>
         </ul>
     </div>
 
