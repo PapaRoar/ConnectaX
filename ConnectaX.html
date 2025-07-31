@@ -1,196 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConnectaX</title>
-    <style>
-        /* Load Caviar Dreams Font */
-        @font-face {
-            font-family: 'CaviarDreams';
-            src: url('https://dl.dropboxusercontent.com/scl/fi/rbwj2cvstorrghg83asuh/CaviarDreams.ttf?rlkey=772bt4rvza8b8pui78hf69vyb&dl=1') format('truetype');
-        }
-        body {
-            font-family: 'CaviarDreams', Arial, sans-serif;
-            color: black;
-            background: white;
-            margin: 20px;
-            line-height: 1.6;
-            user-select: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-        }
-        
-        * {
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-  }
-        
-        .banner {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .banner img {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 10px;
-            pointer-events: none;
-            -webkit-user-drag: none;
-        }
-        .header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .header img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-right: 15px;
-            pointer-events: none;
-            -webkit-user-drag: none;
-        }
-        .header-text h1 {
-            margin: 0;
-            font-size: 22px;
-        }
-        .header-text p {
-            margin: 5px 0 0;
-            font-size: 14px;
-        }
-        .description {
-            margin: 20px 0;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
-        .download-btn {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .download-btn img {
-            width: 150px;
-            height: auto;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .download-btn img:hover {
-            transform: scale(1.1);
-            filter: brightness(1.3);
-        }
-        .screenshot-gallery {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .screenshot-container {
-            overflow-x: auto;
-            white-space: nowrap;
-            padding: 10px;
-        }
-        .screenshots {
-            display: flex;
-            gap: 10px;
-        }
-        .screenshots img {
-            width: 200px;
-            height: auto;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-            pointer-events: none;
-            -webkit-user-drag: none;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 10px 0;
-            font-size: 14px;
-            color: gray;
-        }
-    </style>
-    <script>
-    // Disable right-click context menu
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConnectaX</title>
+  <style>
+    @font-face {
+      font-family: 'CaviarDreams';
+      src: url('https://dl.dropboxusercontent.com/scl/fi/rbwj2cvstorrghg83asuh/CaviarDreams.ttf?rlkey=772bt4rvza8b8pui78hf69vyb&dl=1') format('truetype');
+    }
+    body {
+      font-family: 'CaviarDreams', Arial, sans-serif;
+      color: black;
+      background: white;
+      margin: 20px;
+      line-height: 1.6;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+    }
+    * {
+      -webkit-tap-highlight-color: transparent;
+      outline: none;
+    }
+    .banner {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .banner img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+      pointer-events: none;
+      -webkit-user-drag: none;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 15px;
+      pointer-events: none;
+      -webkit-user-drag: none;
+    }
+    .header-text h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+    .header-text p {
+      margin: 5px 0 0;
+      font-size: 14px;
+    }
+    .description {
+      margin: 20px 0;
+    }
+    .description h2 {
+      margin-top: 50px; /* Increased gap between sections */
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .download-btn {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .download-btn img {
+      width: 150px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .download-btn img:hover {
+      transform: scale(1.1);
+      filter: brightness(1.3);
+    }
+    .screenshot-gallery {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .screenshot-container {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px;
+    }
+    .screenshots {
+      display: flex;
+      gap: 10px;
+    }
+    .screenshots img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      pointer-events: none;
+      -webkit-user-drag: none;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 10px 0;
+      font-size: 14px;
+      color: gray;
+    }
+  </style>
+  <script>
     document.addEventListener('contextmenu', function(e) {
       e.preventDefault();
     });
-
-    // Disable image dragging
     document.addEventListener('dragstart', function(e) {
       e.preventDefault();
     });
   </script>
 </head>
 <body>
-    <!-- Banner Section -->
-    <div class="banner">
-        <img src="https://dl.dropboxusercontent.com/scl/fi/rma0w32t03ymkpydoicqq/Banner.png?rlkey=0ojock8etq6pnhsfte75lbrty&st=37szakvb&dl=0" alt="Banner" loading="lazy">
+
+  <div class="banner">
+    <img src="https://dl.dropboxusercontent.com/scl/fi/rma0w32t03ymkpydoicqq/Banner.png?rlkey=0ojock8etq6pnhsfte75lbrty&st=37szakvb&dl=0" alt="Banner" loading="lazy">
+  </div>
+
+  <div class="header">
+    <img src="https://dl.dropboxusercontent.com/scl/fi/zwuj8oyth9wv08a92f5zw/AppLogo.png?rlkey=o9irlqyheli20t5imrbk0bgwu&st=t09dh64k&dl=0" alt="App Logo" loading="lazy">
+    <div class="header-text">
+      <h1>ConnectaX</h1>
+      <p>Your ultimate all-in-one platform designed to unite people and create unforgettable digital experiences.</p>
     </div>
+  </div>
 
-    <!-- Header Section -->
-    <div class="header">
-        <img src="https://dl.dropboxusercontent.com/scl/fi/zwuj8oyth9wv08a92f5zw/AppLogo.png?rlkey=o9irlqyheli20t5imrbk0bgwu&st=t09dh64k&dl=0" alt="App Logo" loading="lazy">
-        <div class="header-text">
-            <h1>ConnectaX</h1>
-            <p>Your ultimate all-in-one platform designed to unite people and create unforgettable digital experiences.</p>
-        </div>
-    </div>
+  <div class="description">
+    <p>🌟 <b>Welcome to ConnectaX!</b> 🌟<br>
+      Your ultimate all-in-one platform designed to unite people and create unforgettable digital experiences.</p>
 
-    <!-- Updated Description Section -->
-    <div class="description">
-        <p>🌟 <b>Welcome to ConnectaX!</b> 🌟<br>
-        Your ultimate all-in-one platform designed to unite people and create unforgettable digital experiences.</p>
+    <h2>Key Features -</h2>
+    <ul>
+      <li>1️⃣ <b>Chat & Private Messaging:</b> Stay connected with friends or enjoy private conversations anytime. 💬</li>
+      <li>2️⃣ <b>Share Moments:</b> Instantly share photos and videos to capture and celebrate life’s highlights. 📸</li>
+      <li>3️⃣ <b>Video Calling:</b> Experience face-to-face connections, no matter the distance. ☎️</li>
+      <li>4️⃣ <b>Language Chats:</b> Join chats in English, Hindi, Russian, Portuguese, Chinese, Japanese, Korean & Arabic. 🌐</li>
+      <li>5️⃣ <b>Add Friends & Explore Profiles:</b> Build your network and discover like-minded individuals effortlessly. 🫂</li>
+    </ul>
 
-        <h2>Key Features -</h2>
-        <ul>
-            <li>1️⃣ <b>Chat & Private Messaging:</b> Stay connected with friends or enjoy private conversations anytime. 💬</li>
-            <li>2️⃣ <b>Share Moments:</b> Instantly share photos and videos to capture and celebrate life’s highlights. 📸</li>
-            <li>3️⃣ <b>Video Calling:</b> Experience face-to-face connections, no matter the distance. ☎️</li>
-            <li>4️⃣ <b>Language Chats:</b> Join chats in English, Hindi, Russian, Portuguese, Chinese, Japanese, Korean & Arabic. 🌐</li>
-            <li>5️⃣ <b>Add Friends & Explore Profiles:</b> Build your network and discover like-minded individuals effortlessly. 🫂</li>
-        </ul>
+    <h2>🩷 Communities -</h2>
+    <ul>
+      <li>🌈 <b>Pride Central:</b> A safe and welcoming space for the LGBTQ+ community.</li>
+      <li>🧃 <b>Teens Cafe:</b> A safe space for teenagers to hang out.</li>
+      <li>🖤 <b>Goth Hub:</b> Connect with like-minded Goths.</li>
+      <li>✌️ <b>Hippies Club:</b> For the free-spirited and peace-loving!</li>
+      <li>👼🏻 <b>Cupid's Paradise:</b> A romantic haven for love, connection, and meaningful bonds!</li>
+    </ul>
 
-        <h2>🩷 Communities -</h2>
-        <ul>
-            <li>🌈 <b>Pride Central:</b> A safe and welcoming space for the LGBTQ+ community.</li>
-            <li>🧃 <b>Teens Cafe:</b> A safe space for teenagers to hang out.</li>
-            <li>🖤 <b>Goth Hub:</b> Connect with like-minded Goths.</li>
-            <li>✌️ <b>Hippies Club:</b> For the free-spirited and peace-loving!</li>
-            <li>👼🏻 <b>Cupid's Paradise:</b> A romantic haven for love, connection, and meaningful bonds!</li>
-        </ul>
+    <h2>Other Features -</h2>
+    <ul>
+      <li>🎬 <b>Reels:</b> Create reels, explore trends, and showcase your creativity effortlessly!</li>
+      <li>🎮 <b>Arcade:</b> Play 200+ exciting games and climb the leaderboard!</li>
+      <li>🧚🏻 <b>Meta Chat:</b> Explore, battle & chat with friends in a 2D RPG world.</li>
+      <li>🍿 <b>Unwind:</b> Stream your favorite movies, tv shows, asian dramas, anime and read manga.</li>
+      <li>🎶 <b>Radio:</b> Groove to diverse genres & tune in to live radio stations.</li>
+      <li>🎉 <b>Watch Party:</b> Join admin-hosted watch parties and chat with others in real time.</li>
+      <li>💬 <b>Threads:</b> Dive into discussions on 100+ topics and share your voice.</li>
+      <li>❤️ <b>Love Calculator:</b> Test your compatibility in a fun way!</li>
+      <li>🛍️ <b>Marketplace:</b> Buy, sell, and trade items with users in your community.</li>
+      <li>🚀 <b>In-Built Browser:</b> Surf the web with speed and security, all within the app.</li>
+      <li>🛠️ <b>Customer Support:</b> Get quick, reliable assistance whenever needed.</li>
+    </ul>
 
-        <h2>Other Features -</h2>
-        <ul>
-            <li>🎬 <b>Reels:</b> Create reels, explore trends, and showcase your creativity effortlessly!</li>
-            <li>🎮 <b>Arcade:</b> Play 200+ exciting games and climb the leaderboard!</li>
-            <li>🧚🏻 <b>Meta Chat:</b> Explore, battle & chat with friends in a 2D RPG world.</li>
-            <li>🍿 <b>Entertainment:</b> Stream your favorite movies, tv shows, asian dramas, anime and read manga.</li>
-            <li>🎶 <b>Music:</b> Groove to diverse genres & tune in to live radio stations.</li>
-            <li>🎉 <b>Watch Party:</b> Join admin-hosted watch parties and chat with others in real time.</li>
-            <li>💬 <b>Threads:</b> Dive into discussions on 100+ topics and share your voice.</li>
-            <li>🌍 <b>Chats Finder:</b> Connect and chat with users from different apps.</li>
-            <li>🚀 <b>In-Built Browser:</b> Surf the web with speed and security, all within the app.</li>
-            <li>🛠️ <b>Customer Support:</b> Get quick, reliable assistance whenever needed.</li>
-        </ul>
+    <h2>💎 Premium Features -</h2>
+    <ul>
+      <li>📢 <b>Ad-Free Experience:</b> Enjoy uninterrupted browsing and content.</li>
+    </ul>
 
-        <h2>💎 Premium Features -</h2>
-        <ul>
-            <li>📢 <b>Ad-Free Experience:</b> Enjoy uninterrupted browsing and content.</li>
-        </ul>
+    <h2>🔒 Security Features -</h2>
+    <ul>
+      <li>📵 <b>Anti-Screenshot:</b> Safeguard your privacy.</li>
+      <li>🚫 <b>IP Ban:</b> Keep the community safe by blocking troublemakers.</li>
+      <li>🙅‍♀️ <b>Disable Private Chats:</b> Have full control over your interactions.</li>
+    </ul>
+  </div>
 
-        <h2>🔒 Security First -</h2>
-        <ul>
-            <li>📵 <b>No Screenshots Allowed:</b> Safeguard your privacy.</li>
-            <li>🚫 <b>IP Ban:</b> Keep the community safe by blocking troublemakers.</li>
-            <li>🙅‍♀️ <b>Disable Private Chats:</b> Have full control over your interactions.</li>
-        </ul>
-    </div>
-
-    <!-- Screenshot Gallery -->
+  <!-- Screenshot Gallery -->
     <div class="screenshot-gallery">
         <h2>Showcase</h2>
         <div class="screenshot-container">
@@ -215,17 +211,16 @@
             </div>
         </div>
     </div>
-    
-    <!-- Download Button -->
-    <div class="download-btn">
-        <a href="https://apk.e-droid.net/apk/app3510889-zw6x92.apk?v=17" target="_blank">
-            <img src="https://dl.dropboxusercontent.com/scl/fi/sm6f4h8wdvmbd1frwia19/Download.png?rlkey=txvg0redvemanwvdrigemw60c&st=81ylfrtt&dl=0" alt="Download Button" loading="lazy">
-        </a>
-    </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        <p>Copyright © 2025 Dev Raj Malik</p>
-    </div>
+  <div class="download-btn">
+    <a href="https://apk.e-droid.net/apk/app3510889-zw6x92.apk?v=17" target="_blank">
+      <img src="https://dl.dropboxusercontent.com/scl/fi/sm6f4h8wdvmbd1frwia19/Download.png?rlkey=txvg0redvemanwvdrigemw60c&st=81ylfrtt&dl=0" alt="Download Button" loading="lazy">
+    </a>
+  </div>
+
+  <div class="footer">
+    <p>Copyright © 2025 Dev Raj Malik</p>
+  </div>
+
 </body>
 </html>
